@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color: lightsalmon;">
+    <h1 class="border rounded text-primary mx-auto m-5 ms-3 me-3" style="background-color: aqua; text-align: center;">
+        <%=kindofday%>
+    </h1>
+    <h2 class="border rounded  mx-auto m-5 ms-4 me-4"
+        style="background-color: rgb(197, 252, 166); text-align: center; color: turquoise ;">ADD YOUR ITEMS FOR TODAY
+    </h2>
+    <div class="w-sm-50 p-3 me-5 ms-5" style=" background-color: beige;">
+
+        <ul class=" ms-5    p-3" style=" align-items: center; align-content: center;align-self: center  ;">
+            <%for(var i=0;i<new_items.length;i++){%>
+
+                <li class="m-3  fs-4" style="color: cornflowerblue; ">
+
+                    <%=new_items[i]%>
+                </li>
+                <%}%>
+        </ul>
+        <form action="" method="post" class="" style="text-align: center;" >
+
+            <input type="text" class="m-3" name="newitem" placeholder="Add New Item">
+            <button type="submit" class="btn btn-primary rounded ">ADD ITEM</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
